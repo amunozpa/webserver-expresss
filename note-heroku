@@ -1,0 +1,17 @@
+para heroku hacer dos cambios:
+
+1.- definir el puerto 
+
+En server.js se hace lo siguiente
+//configuracion para puerto en HEroku o 300 en local por defecto
+const port = process.env.PORT || 3000;
+
+2.-definir arranque
+
+en Package.json start lo toma por defecto para que heroku lo lea
+"start": "node server.js"
+local se puede llamar con  "npm start"
+
+nodemon se puede usar para llamar en local y hace referencia a un comando y no al paquete
+"nodemon": "nodemon server.js"
+local se puede llamar con  "npm run nodemon"
